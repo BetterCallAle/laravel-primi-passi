@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>FakeNASA</title>
+    {{-- BOOTSTRAP --}}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
 </head>
 <body>
-    <h1>Benvenuto sulla Terra</h1>
-    <p>Dai, la Terra la conosciamo tutti, è inutile scrivere le sue caratteristiche.</p>
-    <a href="{{ route("mars") }}">Vai su Marte</a>
-    <a href="{{ route("pluto") }}">Vai su Plutone</a>
+    @include('layouts.header')
+
+    @include('layouts.main')
 </body>
 </html>

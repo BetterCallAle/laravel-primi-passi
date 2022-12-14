@@ -14,21 +14,27 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('index');
+    $data = [
+        "planetName" => "Terra",
+        "pageNames" => ["home", "mars", "pluto"],
+        "satellites" => ["Luna"]
+    ];
+
+    return view('index', $data);
 })->name("home");
 
 
 Route::get('/marte', function(){
     $planetName = "Marte";
-    $pageName = "mars";
+    $pageNames = ["home", "mars", "pluto"];
     $satellites = ["Phobos", "Deimos"];
-    return view('mars', compact("satellites", "planetName"));
+    return view('mars', compact("planetName", "satellites", "pageNames"));
 })->name('mars');
 
 Route::get("/plutone", function(){
     $data = [
         "planetName"=> "Plutone",
-        "pageName" => "pluto",
+        "pageNames" => ["home", "mars", "pluto"],
         "satellites" => ["Caronte", "Stige", "Notte", "Cerbero", "Idra"]
     ];
     return view('pluto', $data);
