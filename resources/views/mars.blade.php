@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Benvenuto su Marte</title>
 </head>
 <body>
     <h1>Benvenuto su {{ $planetName }}!</h1>
@@ -16,11 +16,20 @@
     @endphp
 
     @if ($total_satellites === 1)
-        <h3>{{ $planetName }} ha un solo satellite</h3>
+        <h3>{{ $planetName }} ha un solo satellite:</h3>
     @else
-        <h3>{{ $planetName }} ha ben {{ $total_satellites }} satelliti</h3>
+        <h3>{{ $planetName }} ha ben {{ $total_satellites }} satelliti:</h3>
     @endif
-    
-    <a href="{{ route("home") }}">Torna sulla Terra</a>
+
+    <ul>
+        @foreach ($satellites as $satellite)
+            <li>{{ $satellite }}</li>
+        @endforeach
+    </ul>
+
+    <p>Ti aspettavi altre informazioni su {{ $planetName }}? Beh, che ti aspettavi? C'è un motivo se questo sito si chiama "FakeNASA"</p>
+
+    <a href="{{ route("home") }}">Vai sulla Terra</a>
+    <a href="{{ route("pluto") }}">Vai su Plutone</a>
 </body>
 </html>

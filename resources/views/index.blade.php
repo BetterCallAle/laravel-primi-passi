@@ -10,5 +10,6 @@
     <h1>Benvenuto sulla Terra</h1>
     <p>Dai, la Terra la conosciamo tutti, è inutile scrivere le sue caratteristiche.</p>
     <a href="{{ route("mars") }}">Vai su Marte</a>
+    <a href="{{ route("pluto") }}">Vai su Plutone</a>
 </body>
 </html>

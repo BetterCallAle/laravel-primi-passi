@@ -18,8 +18,18 @@ Route::get('/', function () {
 })->name("home");
 
 
-Route::get('/mars', function(){
+Route::get('/marte', function(){
     $planetName = "Marte";
+    $pageName = "mars";
     $satellites = ["Phobos", "Deimos"];
     return view('mars', compact("satellites", "planetName"));
 })->name('mars');
+
+Route::get("/plutone", function(){
+    $data = [
+        "planetName"=> "Plutone",
+        "pageName" => "pluto",
+        "satellites" => ["Caronte", "Stige", "Notte", "Cerbero", "Idra"]
+    ];
+    return view('pluto', $data);
+})->name('pluto');
