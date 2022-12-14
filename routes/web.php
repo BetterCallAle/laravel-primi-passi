@@ -19,5 +19,7 @@ Route::get('/', function () {
 
 
 Route::get('/mars', function(){
-    return view('mars');
+    $planetName = "Marte";
+    $satellites = ["Phobos", "Deimos"];
+    return view('mars', compact("satellites", "planetName"));
 })->name('mars');

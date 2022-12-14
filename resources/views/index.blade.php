@@ -7,7 +7,8 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Hello World!</h1>
-    <a href="{{ route("mars") }}">Go to give your regards to Mars</a>
+    <h1>Benvenuto sulla Terra</h1>
+    <p>Dai, la Terra la conosciamo tutti, è inutile scrivere le sue caratteristiche.</p>
+    <a href="{{ route("mars") }}">Vai su Marte</a>
 </body>
 </html>
